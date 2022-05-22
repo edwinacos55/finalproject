@@ -11,6 +11,12 @@ class Fcfs extends Component {
         }
     }
 
+    findTurnAroundTime(processes, n, burstTime, waitTime, turnAroundTime) {
+        for(let i=0; i < n; i++) {
+            turnAroundTime[i] = burstTime[i] + waitTime[i];
+        }
+    }
+
 
 }
 export default Fcfs
