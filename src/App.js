@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import Fcfs from "./Components/fcfs";
-import Sjf from "./Components/sjf";
-import Srtf from "./Components/srtf";
-import RR from "./Components/rr";
+import { Row, Col,Button, Container} from "reactstrap";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Fcfs from "./fcfs";
+import Sjf from "./sjf";
+import Srtf from "./srtf";
+import RR from "./rr";
 
 
 class  App extends Component() {
