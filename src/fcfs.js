@@ -4,6 +4,9 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 class Fcfs extends Component {
     constructor(props) {
 		super(props);
+        this.state ={};
+        this.handle_calculate = this.handle_calculate.bind(this);
+
     }
 
     findWaitingTime(processes,n,burstTime,waitTime){
