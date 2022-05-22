@@ -17,7 +17,7 @@ These ones are the ones I understand the most in terms of functionality. Their f
 ### Why did I choose this kind of project?
 I took a class a while back and we had to research some of these algorithms and how they were programmed in java. Now I wanted to see how far I can take them in React using different components and actually displaying the calculator on an actual website. 
 
-#Goal
-The goal is to make a calculator for each of the algorithms (maybe have them in different pages). The user can enter the proccess name and the waiting time. Then a table with the answers will be displayed on the side telling the user the reults.
+# Goal
+The goal is to make a calculator for each of the algorithms (maybe have them in different pages). The user can enter the proccess name and the waiting time. Then a table with the answers will be displayed on the side telling the user the results.
 
 If you want to read more about CPU scheduling and how they work (this includes formulas) you can visit https://www.tutorialspoint.com/operating_system/os_process_scheduling_algorithms.htm for more info.
