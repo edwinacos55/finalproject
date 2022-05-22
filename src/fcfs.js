@@ -60,5 +60,15 @@ class Fcfs extends Component {
 
 
 }
+
+handle_calculate() {
+    let process_name_objects = document.getElementsByName("process_name");
+    let burst_time_objects = document.getElementsByName("burst_time");
+    let process_cn = process_name_objects.length;
+    
+    let processes = [];
+    let burst_times = [];
+
+}
 }
 export default Fcfs
