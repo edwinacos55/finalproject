@@ -65,6 +65,12 @@ handle_calculate() {
     let process_name_objects = document.getElementsByName("process_name");
     let burst_time_objects = document.getElementsByName("burst_time");
     let process_cn = process_name_objects.length;
+    for (var i = 0; i < process_cn; i++) {
+        if (process_name_objects[i].value == '' && burst_time_objects[i].value !== '') {
+            var row_nm = i + 1;
+            alert("Burst time exists but process name is missing at row number " + row_nm.toString());
+            return;
+        }
     
     let processes = [];
     let burst_times = [];
