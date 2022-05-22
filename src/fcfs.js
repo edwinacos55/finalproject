@@ -35,7 +35,11 @@ class Fcfs extends Component {
 			total_burstTime = total_burstTime + burstTime[i];
 			total_turnAroundTime = total_turnAroundTime + turnAroundTime[i];
 		}
-    
+        let html = "";		
+		let chart = "";
+		let chartdesp = "";
+		chart += `<div class="d-flex h-cu">`;
+		chartdesp += `<div class="d-flex h-cu mb-1">`;
 
 
 }
