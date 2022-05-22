@@ -24,9 +24,10 @@ class Fcfs extends Component {
             waitTime[i]=0;
             turnAroundTime[i]=0;
         }
-        let total_waitTime = 0;
         let total_turnAroundTime = 0; 		
 		let total_burstTime = 0;
+        let total_waitTime = 0;
+       
         this.findWaitingTime(processes, n, burstTime, waitTime);
         this.findTurnAroundTime(processes, n, burstTime, waitTime, turnAroundTime);
 		for (let i = 0; i < n; i++) {
