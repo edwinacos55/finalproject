@@ -79,6 +79,8 @@ handle_calculate() {
             alert("Process name exists but burst time is missing at row number " + row_nm.toString());
             return;
         }
+        if (process_name_objects[i].value == '' && burst_time_objects[i].value == '') {
+            continue;
     
    
 
