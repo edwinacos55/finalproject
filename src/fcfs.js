@@ -94,6 +94,74 @@ handle_calculate() {
 		}
         this.findavgTime(processes, processes.length, burst_times);
 }
+
+componentDidMount() {
+}
+
+render() {
+    return (
+        <React.Fragment>
+          <Container fluid>
+            <div className="container-mg">
+            <h4 className="mb-4">FCFS scheduling</h4>
+            <h6>
+            First in, first out (FIFO), also known as first come, first served (FCFS), is the simplest scheduling algorithm. FIFO simply queues processes in the order that they arrive in the ready queue. 
+In this, the process that comes first will be executed first and next process starts only after the previous gets fully executed. 
+            </h6>
+                <Row>
+                <Col md={6}>
+                    <Row className="mb-2">
+                        <Col md={6}><span>Process Name</span></Col>
+                        <Col md={6}><span>Burst Time</span></Col>
+                    </Row>
+                    <Row className="mb-2">
+                        <Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+                        <Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+                    </Row>
+                    <Row className="mb-2">
+                        <Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+                        <Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+                    </Row>
+                    <Row className="mb-2">
+                        <Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+                        <Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+                    </Row>
+                    <Row className="mb-2">
+                        <Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+                        <Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+                    </Row>
+                    <Row className="mb-2">
+                        <Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+                        <Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+                    </Row>
+                    <Row className="mb-2">
+                        <Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+                        <Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+                    </Row>
+                    <Row className="mb-2">
+                        <Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+                        <Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+                    </Row>
+                    <Row className="mb-2">
+                        <Col md={6}></Col>
+                        <Col md={6}><Button type="button" onClick={this.handle_calculate} className="fl-right">Calculate</Button></Col>
+                    </Row>
+                </Col>
+                <Col md={6}>
+                    <div className="resdv">
+                        <div id="result" className="mb-2"></div>
+                        <div id="chartdesp"></div>
+                        <div id="chart"></div>
+                    </div>
+                </Col>
+                </Row>
+            </div>
+            </Container>
+        </React.Fragment>
+    );
+}
+
+
 }
 
 export default Fcfs
