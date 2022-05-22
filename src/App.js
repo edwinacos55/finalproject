@@ -6,7 +6,10 @@ import RR from "./Components/rr";
 
 
 class  App extends Component() {
+  constructor(props) {
+		super(props);
+		this.state = {};
 }
-
+}
 
 export default App;
