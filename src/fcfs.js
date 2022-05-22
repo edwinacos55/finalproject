@@ -38,4 +38,5 @@ class Fcfs extends Component {
 
 
 }
+}
 export default Fcfs
