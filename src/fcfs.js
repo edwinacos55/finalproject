@@ -81,9 +81,14 @@ handle_calculate() {
         }
         if (process_name_objects[i].value == '' && burst_time_objects[i].value == '') {
             continue;
-    
-   
+        }
+        processes.push(process_name_objects[i].value);
+        burst_times.push(parseInt(burst_time_objects[i].value));
 
+        if (processes.length == 0) {
+			alert("Please fill at least one row");
+			return;
+		}
 }
 }
 }
