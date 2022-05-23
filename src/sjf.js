@@ -75,5 +75,67 @@ class Sjf extends Component {
 		document.getElementById("chart").innerHTML = chart;
 		document.getElementById("chartdesp").innerHTML = chartdesp;
     }
+    componentDidMount() {
+	}
+    render() {
+		return (
+			<React.Fragment>
+			  <Container fluid>
+				<div className="container-mg">
+				<h4 className="mb-4">SJf scheduling</h4>
+				<h6>SJf scheduling is a scheduling policy that selects the waiting process with the smallest execution time to execute next.
+				</h6>
+					<Row>
+					<Col md={6}>
+						<Row className="mb-2">
+							<Col md={6}><span>Process Name</span></Col>
+							<Col md={6}><span>Burst Time</span></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={6}></Col>
+							<Col md={6}><Button type="button" onClick={this.handle_calculate} className="fl-right">Calculate</Button></Col>
+						</Row>
+					</Col>
+					<Col md={6}>
+						<div className="resdv">
+							<div id="result" className="mb-2"></div>
+							<div id="chartdesp"></div>
+							<div id="chart"></div>
+						</div>
+					</Col>
+					</Row>
+				</div>
+				</Container>
+			</React.Fragment>
+		);
+	}
 }
 export default Sjf
