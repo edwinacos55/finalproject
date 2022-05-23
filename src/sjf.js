@@ -18,5 +18,19 @@ class Sjf extends Component {
             turnAroundTime[i] = burstTime[i] + waitTime[i];
         }
     }
+    sort_process(processes, burst_times) {
+        var obj = [];
+        for (var i = 0; i < processes.length; i++) {
+            obj.push({"process": processes[i], "burstTime": burst_times[i]})
+        }
+        obj.sort((a, b) => (a.burstTime > b.burstTime) ? 1 : -1);
+        var sorted_processes = [];
+        var sorted_burstTime = [];
+        for (var i = 0; i < obj.length; i++) {
+            sorted_processes.push(obj[i].process);
+            sorted_burstTime.push(obj[i].burstTime);
+        }
+        return {"sorted_processes": sorted_processes, "sorted_burstTime": sorted_burstTime}
+    }
 }
 export default Sjf
