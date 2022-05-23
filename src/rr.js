@@ -133,6 +133,77 @@ class RR extends Component {
 	}
     componentDidMount() {
 	}
+    render() {
+		return (
+			<React.Fragment>
+			  <Container fluid>
+				<div className="container-mg">
+				<h4 className="mb-4">Round Roubin scheduling</h4>
+				<h6>
+                Round Robin is a CPU scheduling algorithm where each process is assigned a fixed time slot in a cyclic way.
+				</h6>
+                    <Row className="mb-2">
+					<Col md={6}>
+                        <span className="me-4">Quantum</span>
+                        <input name="quantum" id="quantum" type="number" defaultValue="2" />
+                    </Col>
+                    </Row>
+					<Row>
+					<Col md={6}>
+						<Row className="mb-2">
+							<Col md={6}><span>Process Name</span></Col>
+							<Col md={6}><span>Burst Time</span></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={6}></Col>
+							<Col md={6}><Button type="button" onClick={this.handle_calculate} className="fl-right">Calculate</Button></Col>
+						</Row>
+					</Col>
+					<Col md={6}>
+						<div className="resdv">
+							<div id="result" className="mb-2"></div>
+							<div id="chartdesp"></div>
+							<div id="chart"></div>
+						</div>
+					</Col>
+					</Row>
+				</div>
+
+
+
+
+				</Container>
+			</React.Fragment>
+		);
+	}
 }
 
 
