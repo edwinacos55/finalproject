@@ -17,16 +17,16 @@ class Home extends Component {
 			  <Container fluid>
 				<div className="container-mg mb-4">
 					<Row><Col md={12}>
-                        <Link to="/fcfs">FCFS</Link>
+                        <Link to="/fcfs">FIRST COME FIRST SERVE (FCFS)</Link>
                     </Col></Row>
                     <Row><Col md={12}>
-                        <Link to="/sjf">SJF</Link>
+                        <Link to="/sjf">SHORTEST JOB FIRST (SJF)</Link>
                     </Col></Row>
                     <Row><Col md={12}>
-                        <Link to="/rr">Round Robin</Link>
+                        <Link to="/rr">Round Robin (RR)</Link>
                     </Col></Row>
                     <Row><Col md={12}>
-                        <Link to="/srtf">SRTF</Link>
+                        <Link to="/srtf">SHORTEST REMAINING TIME FIRST (SRTF)</Link>
                     </Col></Row>
 				</div>
 				</Container>
