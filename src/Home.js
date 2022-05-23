@@ -16,7 +16,17 @@ class Home extends Component {
 				<h1>CPU Scheduling Algorithms Calculator</h1>
 			  <Container fluid>
 				<div className="container-mg mb-4">
-					<Row><Col md={12}>
+                <Row><Col md={12}>
+                        <Link to="/fcfs">FCFS</Link>
+                    </Col></Row>
+                    <Row><Col md={12}>
+                        <Link to="/sjf">SJF</Link>
+                    </Col></Row>
+                    <Row><Col md={12}>
+                        <Link to="/rr">Round Robin</Link>
+                    </Col></Row>
+                    <Row><Col md={12}>
+                        <Link to="/srtf">SRTF</Link>
                     </Col></Row>
 				</div>
 				</Container>

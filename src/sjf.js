@@ -75,6 +75,40 @@ class Sjf extends Component {
 		document.getElementById("chart").innerHTML = chart;
 		document.getElementById("chartdesp").innerHTML = chartdesp;
     }
+    handle_calculate() {
+		var process_name_objects = document.getElementsByName("process_name");
+		var burst_time_objects = document.getElementsByName("burst_time");
+		var process_cn = process_name_objects.length;
+		
+		var processes = [];
+		var burst_times = [];
+		for (var i = 0; i < process_cn; i++) {
+			if (process_name_objects[i].value == '' && burst_time_objects[i].value !== '') {
+				var row_nm = i + 1;
+				alert("Burst time exists but process name is missing at row number " + row_nm.toString());
+				return;
+			}
+			if (process_name_objects[i].value != '' && burst_time_objects[i].value == '') {
+				var row_nm = i + 1;
+				alert("Process name exists but burst time is missing at row number " + row_nm.toString());
+				return;
+			}
+			if (process_name_objects[i].value == '' && burst_time_objects[i].value == '') {
+				continue;
+			}			
+			processes.push(process_name_objects[i].value);
+			burst_times.push(parseInt(burst_time_objects[i].value));
+		}
+
+		if (processes.length == 0) {
+			alert("Please fill at least one row");
+			return;
+		}
+        var res = this.sort_process(processes, burst_times);
+        var processes = res["sorted_processes"];
+        var burst_times = res["sorted_burstTime"];
+		this.findavgTime(processes, processes.length, burst_times);
+	}
     componentDidMount() {
 	}
     render() {
