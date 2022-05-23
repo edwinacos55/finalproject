@@ -6,7 +6,7 @@ class Fcfs extends Component {
 		super(props);
         this.state ={};
         this.handle_calculate = this.handle_calculate.bind(this);
-
+        this.chartcolors = ["#d51364", "#d513c6", "#5e13d5", "#1334d5", "#13c3d5", "#13d561", "#31d513", "#aed513", "#d59913", "#d55213"]
     }
 
     findWaitingTime(processes,n,burstTime,waitTime){
