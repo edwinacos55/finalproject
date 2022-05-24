@@ -1,6 +1,15 @@
 import React, { Component } from "react";
 import { Row, Col,Button, Container} from "reactstrap";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+class Process
+{
+    constructor(pid,burstTime,art)
+    {
+        this.pid = pid;    // Process ID
+        this.burstTime = burstTime;    // Burst Time
+        this.arrivalTime = this.arrivalTime;    // Arrival Time
+    }
+}
 class Srtf extends Component {
     constructor(props) {
 		super(props);
