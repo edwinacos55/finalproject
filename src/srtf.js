@@ -159,6 +159,76 @@ findavgTime(processes,n){
 	}
     componentDidMount() {
 	}
+    render() {
+		return (
+			<React.Fragment>
+			  <Container fluid>
+				<div className="container-mg">
+				<h4 className="mb-4">SRTF scheduling</h4>
+				<h6>
+				In the Shortest Remaining Time First (SRTF) scheduling algorithm, the process with the smallest amount of time remaining until completion is selected to execute. Since the currently executing process is the one with the shortest amount of time remaining by definition, and since that time should only reduce as execution progresses, processes will always run until they complete or a new process is added that requires a smaller amount of time.
+				</h6>
+					<Row>
+					<Col md={6}>
+						<Row className="mb-2">
+							<Col md={4}><span>Process Name</span></Col>
+							<Col md={4}><span>Burst Time</span></Col>
+                            <Col md={4}><span>Arrival Time</span></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={4}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={4}><input name="burst_time" className="w-100" type="number" /></Col>
+                            <Col md={4}><input name="arrival_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+                            <Col md={4}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={4}><input name="burst_time" className="w-100" type="number" /></Col>
+                            <Col md={4}><input name="arrival_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+                            <Col md={4}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={4}><input name="burst_time" className="w-100" type="number" /></Col>
+                            <Col md={4}><input name="arrival_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+                            <Col md={4}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={4}><input name="burst_time" className="w-100" type="number" /></Col>
+                            <Col md={4}><input name="arrival_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+                            <Col md={4}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={4}><input name="burst_time" className="w-100" type="number" /></Col>
+                            <Col md={4}><input name="arrival_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+                            <Col md={4}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={4}><input name="burst_time" className="w-100" type="number" /></Col>
+                            <Col md={4}><input name="arrival_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+                            <Col md={4}><input name="process_name" className="w-100" type="text" /></Col>
+							<Col md={4}><input name="burst_time" className="w-100" type="number" /></Col>
+                            <Col md={4}><input name="arrival_time" className="w-100" type="number" /></Col>
+						</Row>
+						<Row className="mb-2">
+							<Col md={6}></Col>
+							<Col md={6}><Button type="button" onClick={this.handle_calculate} className="fl-right">Calculate</Button></Col>
+						</Row>
+					</Col>
+					<Col md={6}>
+						<div className="resdv">
+							<div id="result" className="mb-2"></div>
+							<div id="chartdesp"></div>
+							<div id="chart"></div>
+						</div>
+					</Col>
+					</Row>
+				</div>
+				</Container>
+			</React.Fragment>
+		);
+	}
+
 }
 
 export default Srtf
