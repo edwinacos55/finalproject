@@ -3,83 +3,86 @@ import { Row, Col,Button, Container} from "reactstrap";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 class Process
 {
-    constructor(pid,burstTime,arrivalTime)
+    constructor(pid,burstTime,art)
     {
         this.pid = pid;    // Process ID
         this.burstTime = burstTime;    // Burst Time
-        this.arrivalTime = this.arrivalTime;    // Arrival Time
+        this.art = art;    // Arrival Time
     }
 }
 class Srtf extends Component {
-    constructor(props) {
+	constructor(props) {
 		super(props);
-		this.state = {};
-        this.handle_calculate = this.handle_calculate.bind(this);
+		this.state = {
+		};
+		this.handle_calculate = this.handle_calculate.bind(this);
 		this.chartcolors = ["#d51364", "#d513c6", "#5e13d5", "#1334d5", "#13c3d5", "#13d561", "#31d513", "#aed513", "#d59913", "#d55213"]
-    }
-    findWaitingTime(proc,n,waitTime){
-        let rt = new Array(n);
-             
-            for (let i = 0; i < n; i++)
-                rt[i] = proc[i].burstTime;
-             
-            let complete = 0, t = 0, minimum = Number.MAX_VALUE;
-            let shortest = 0, finish_time;
-            let check = false;
-             
-            while (complete != n) {
-             
-              
-                for (let j = 0; j < n; j++) 
-                {
-                    if ((proc[j].arrivalTime <= t) &&
-                      (rt[j] < minimum) && rt[j] > 0) {
-                        minimum = rt[j];
-                        shortest = j;
-                        check = true;
-                    }
-                }
-             
-                if (check == false) {
-                    t++;
-                    continue;
-                }
-             
-            
-                rt[shortest]--;
-             
-             
-                minimum = rt[shortest];
-                if (minimum == 0)
-                    minimum = Number.MAX_VALUE;
-             
-               
-                if (rt[shortest] == 0) {
-             
-                   
-                    complete++;
-                    check = false;
-             
-                    
-                    finish_time = t + 1;
-             
-                  
-                    waitTime[shortest] = finish_time -proc[shortest].burstTime -proc[shortest].arrivalTime;
-             
-                    if (waitTime[shortest] < 0)
-                        waitTime[shortest] = 0;
-                }
-                
-                t++;
-            }
-        }
+	}
 
-        findTurnAroundTime(proc,n,waitTime,turnAroundTime)
+	findWaitingTime(proc,n,waitTime){
+    let rt = new Array(n);
+         
+        for (let i = 0; i < n; i++)
+            rt[i] = proc[i].burstTime;
+         
+        let complete = 0, t = 0, minm = Number.MAX_VALUE;
+        let shortest = 0, finish_time;
+        let check = false;
+         
+        while (complete != n) {
+         
+          
+            for (let j = 0; j < n; j++) 
+            {
+                if ((proc[j].art <= t) &&
+                  (rt[j] < minm) && rt[j] > 0) {
+                    minm = rt[j];
+                    shortest = j;
+                    check = true;
+                }
+            }
+         
+            if (check == false) {
+                t++;
+                continue;
+            }
+         
+        
+            rt[shortest]--;
+         
+         
+            minm = rt[shortest];
+            if (minm == 0)
+                minm = Number.MAX_VALUE;
+         
+           
+            if (rt[shortest] == 0) {
+         
+               
+                complete++;
+                check = false;
+         
+                
+                finish_time = t + 1;
+         
+              
+                waitTime[shortest] = finish_time -
+                             proc[shortest].burstTime -
+                             proc[shortest].art;
+         
+                if (waitTime[shortest] < 0)
+                    waitTime[shortest] = 0;
+            }
+            
+            t++;
+        }
+    }
+    findTurnAroundTime(proc,n,waitTime,turnAroundTime)
     {
         for (let i = 0; i < n; i++)
             turnAroundTime[i] = proc[i].burstTime + waitTime[i];
     }
-findavgTime(processes,n){
+    findavgTime(processes,n){
         let waitTime = new Array(n);
         let turnAroundTime = new Array(n);
         for(let i=0;i<n;i++)
@@ -122,8 +125,9 @@ findavgTime(processes,n){
 		document.getElementById("chart").innerHTML = chart;
 		document.getElementById("chartdesp").innerHTML = chartdesp;
 
-    }
-    handle_calculate() {
+    }	
+
+	handle_calculate() {
 		var process_name_objects = document.getElementsByName("process_name");
 		var burst_time_objects = document.getElementsByName("burst_time");
         var arrival_time_objects = document.getElementsByName("arrival_time");
@@ -159,9 +163,11 @@ findavgTime(processes,n){
 		}
 		this.findavgTime(processes, processes.length);
 	}
-    componentDidMount() {
+
+	componentDidMount() {
 	}
-    render() {
+
+	render() {
 		return (
 			<React.Fragment>
 			  <Container fluid>
@@ -230,7 +236,6 @@ findavgTime(processes,n){
 			</React.Fragment>
 		);
 	}
-
 }
 
 export default Srtf
