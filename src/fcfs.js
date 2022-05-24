@@ -46,7 +46,7 @@ class Fcfs extends Component {
         for (let i = 0; i < n; i++) {
 			var colorcn = this.chartcolors.length;
             var color_index = i % colorcn;
-			html += `<span> ${processes[i]} waiting time = ${waitTime[i]} </span><br>`;
+			html += `<span> ${processes[i]} Waiting Time = ${waitTime[i]} || Turn Around Time= ${turnAroundTime[i]}  </span><br>`;
 			let width = (100 * burstTime[i] / total_burstTime).toFixed(2);
 			chart += `<div class="d-flex" style="width: ${width}%;background-color:${this.chartcolors[color_index]}"></div>`;
 			chartdesp += `<div class="d-flex" style="width: ${width}%;">${processes[i]}(${burstTime[i]})</div>`;
