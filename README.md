@@ -20,4 +20,7 @@ I took a class a while back and we had to research some of these algorithms and 
 # Goal
 The goal is to make a calculator for each of the algorithms (maybe have them in different pages). The user can enter the proccess name and the waiting time. Then a table with the answers will be displayed on the side telling the user the results.
 
+# App Screen-Shots
+![calculate gif](https://user-images.githubusercontent.com/25490842/170073754-37412947-077e-4d6c-af21-6c16a1d802ab.gif)
+
 If you want to read more about CPU scheduling and how they work (this includes formulas) you can visit https://www.tutorialspoint.com/operating_system/os_process_scheduling_algorithms.htm for more info.
