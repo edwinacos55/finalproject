@@ -3,7 +3,7 @@ import { Row, Col,Button, Container} from "reactstrap";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 class Process
 {
-    constructor(pid,burstTime,art)
+    constructor(pid,burstTime,arrivalTime)
     {
         this.pid = pid;    // Process ID
         this.burstTime = burstTime;    // Burst Time
