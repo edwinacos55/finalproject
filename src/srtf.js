@@ -113,7 +113,7 @@ class Srtf extends Component {
 			html += `<span> ${processes[i].pid} Waiting Time = ${waitTime[i]} || Turn Around Time= ${turnAroundTime[i]} </span><br>`;
 			let width = (100 * processes[i].burstTime / total_burstTime).toFixed(2);
 			chart += `<div class="d-flex" style="width: ${width}%;background-color:${this.chartcolors[color_index]}"></div>`;
-			chartdesp += `<div class="d-flex" style="width: ${width}%;">${processes[i].pid}(${processes[i].burstTime})</div>`;
+			chartdesp += `<div class="d-flex" style="width: ${width}%;">${processes[i].pid}(${waitTime[i]}-${turnAroundTime[i]})</div>`;
         }
 		chart += `</div>`;
 		chartdesp += `</div>`;

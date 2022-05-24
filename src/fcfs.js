@@ -6,6 +6,7 @@ class Fcfs extends Component {
 		super(props);
         this.state ={};
         this.handle_calculate = this.handle_calculate.bind(this);
+        this.handleAddRow =this.handleAddRow.bind(this);
         this.chartcolors = ["#d51364", "#d513c6", "#5e13d5", "#1334d5", "#13c3d5", "#13d561", "#31d513", "#aed513", "#d59913", "#d55213"]
     }
 
@@ -49,7 +50,7 @@ class Fcfs extends Component {
 			html += `<span> ${processes[i]} Waiting Time = ${waitTime[i]} || Turn Around Time= ${turnAroundTime[i]}  </span><br>`;
 			let width = (100 * burstTime[i] / total_burstTime).toFixed(2);
 			chart += `<div class="d-flex" style="width: ${width}%;background-color:${this.chartcolors[color_index]}"></div>`;
-			chartdesp += `<div class="d-flex" style="width: ${width}%;">${processes[i]}(${burstTime[i]})</div>`;
+			chartdesp += `<div class="d-flex" style="width: ${width}%;">${processes[i]}(${waitTime[i]}-${turnAroundTime[i]})</div>`;
         }
         chart += `</div>`;
 		chartdesp += `</div>`;
@@ -94,6 +95,15 @@ handle_calculate() {
 		}
         this.findavgTime(processes, processes.length, burst_times);
 }
+
+
+handleAddRow() {
+    <Row className="mb-2">
+    <Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
+    <Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+</Row>
+}
+
 
 componentDidMount() {
 }
@@ -141,10 +151,12 @@ In this, the process that comes first will be executed first and next process st
                     <Row className="mb-2">
                         <Col md={6}><input name="process_name" className="w-100" type="text" /></Col>
                         <Col md={6}><input name="burst_time" className="w-100" type="number" /></Col>
+                        
                     </Row>
                     <Row className="mb-2">
                         <Col md={6}></Col>
                         <Col md={6}><Button type="button" onClick={this.handle_calculate} className="fl-right">Calculate</Button></Col>
+                       
                     </Row>
                 </Col>
                 <Col md={6}>
